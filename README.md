@@ -19,6 +19,10 @@ This project involves analyzing retail sales data to uncover important business 
 - SQL queries for data extraction and analysis
 - Python for data exploration and visualization 
 - Power BI for interactive dashboards 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ab78632 (Resolve merge conflicts)
 ## Project Structure
 1. Import and clean data
 2. Perform sales and product analysis
