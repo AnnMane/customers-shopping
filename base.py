@@ -24,3 +24,5 @@ try:
 
 except Exception as e:
     print("❌ Błąd połączenia:", e)
+    print("Upewnij się, że PostgreSQL działa i dane logowania są poprawne.")
+    exit(1)
