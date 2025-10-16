@@ -17,9 +17,8 @@ This project involves analyzing retail sales data to uncover important business 
 ## Technologies Used
 - PostgreSQL (pgAdmin4, VS Code)
 - SQL queries for data extraction and analysis
-- Python for data exploration and visualization (optional)
-- Power BI for interactive dashboards (optional)
-
+- Python for data exploration and visualization 
+- Power BI for interactive dashboards 
 ## Project Structure
 1. Import and clean data
 2. Perform sales and product analysis
