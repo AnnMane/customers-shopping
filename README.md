@@ -7,26 +7,41 @@
 ![VS Code](https://img.shields.io/badge/vscode-007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Terminal](https://img.shields.io/badge/terminal-222222.svg?style=for-the-badge&logo=windows-terminal&logoColor=white)
 
-# Customer Shopping Data Analysis – Retail Sales
+# 🛍️ Customer Shopping Data Analysis & Automation
 
-## Project Description
-This project involves analyzing retail sales data to uncover important business insights such as customer buying patterns, product performance, and seasonal trends. The goal is to provide actionable information for improving sales and customer engagement.
+## 📊 Project Overview
+This project represents an **end-to-end data analysis pipeline** for retail sales data. Unlike standard analysis performed on static CSV files, this project mimics a real-world enterprise environment where data is managed in a **relational database (PostgreSQL)** and reporting is **fully automated using Python**.
 
-## Technologies Used
-- PostgreSQL (pgAdmin4, VS Code)
-- SQL queries for data extraction and analysis
-- Python for data exploration and visualization 
-- Power BI for interactive dashboards 
+The goal was to analyze customer demographics, shopping behaviors, and sales trends, while establishing a reproducible workflow that automatically extracts data and generates **Excel reports**.
 
-## Project Structure
-1. Import and clean data
-2. Perform sales and product analysis
-3. Segment customers based on purchase behavior
-4. Visualize key metrics and trends
-5. Provide business recommendations
+## 🛠️ Tech Stack
+* **PostgreSQL (pgAdmin4):** Database management and centralized data storage.
+* **SQL:** Advanced querying for data cleaning, segmentation, and aggregation.
+* **Python (Pandas, Psycopg2):** ETL automation and database connection scripting.
+* **Excel:** The final output format for business reporting.
+* **VS Code:** Integrated Development Environment (IDE).
 
-## How to Use
-Clone the repository, connect to the database using pgAdmin or VS Code, and run the SQL scripts. You can also explore Jupyter notebooks and Power BI reports included.
+## ⚙️ Work Process 
 
-## About Me
-This project is part of my data analyst portfolio showcasing my skills in SQL, data analysis, and visualization.
+### 1. Database Architecture & Data Ingestion
+* Moved away from flat files by designing a **PostgreSQL database schema**.
+* Imported raw customer data into the database to enable structured querying and data persistence.
+
+### 2. Modular SQL Analysis
+I structured the SQL queries into **numbered, modular files** to ensure maintainability and logical flow. Instead of one giant script, the analysis is broken down:
+* **Data Quality:** `1.0_missing_values.sql`, `1.1_duplicate_records.sql` - Cleaning data at the source.
+* **Demographics:** `1.3_Gender.sql`, `3.1_age_sex_and_location...` - Understanding the customer base.
+* **Sales Trends:** `2.3_monthly_sales_trends.sql` - Identifying seasonal peaks.
+* **KPIs:** `2.1_Top_shopping_mall...` - Ranking top-performing locations.
+
+### 3. Python Automation (ETL Script)
+This is the core technical highlight of the project. I developed a Python script (`excels.py`) to automate the reporting process:
+* **Database Connection:** Uses `psycopg2` to securely connect to the PostgreSQL instance.
+* **Query Execution:** Iterates through the folder of SQL files and executes them sequentially.
+* **Automated Export:** Fetches the results of each query and automatically saves them as separate **Excel reports**, ready for stakeholders.
+
+## 📈 Key Insights
+* **Customer Demographics:** Analyzed the distribution of customers by age and gender to tailor marketing strategies.
+* **Mall Performance:** Identified top-performing shopping malls based on total revenue and transaction volume.
+* **Seasonal Trends:** Calculated monthly sales fluctuations to predict high-demand periods.
+* **Category Analysis:** Determined which product categories drive the most revenue
